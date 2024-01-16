@@ -10,6 +10,9 @@
     <!-- animate css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
+    <!-- Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
     <link rel="stylesheet" href="style.css">
     <title>Obys Agency</title>
 </head>
@@ -78,6 +81,7 @@
                 fill="currentColor"></path>
         </svg>
     </div>
+
     <div id="main">
         <div id="page1" data-scroll data-scroll-speed="-1">
             <div id="nav">
@@ -87,7 +91,7 @@
                     <h4>Contacts</h4>
                 </div>
             </div>
-
+            <!-- <div id="center"></div> -->
             <div class="hero" id="hero1">
                 <h1>We design</h1>
             </div>
@@ -120,7 +124,10 @@
             </div>
             <div id="page3-div2">
                 <div class="image-div-container" id="box1">
-                    <h3>OLGA PRUDKA</h3>
+                    <div class="h3Holder center h-[2vw] overflow-hidden">
+                        <h3 class="text-[2vw] font-[500] leading-none">OLGA PRUDKA</h3>
+                        <!-- <h3 class="text-[2vw] font-[500] leading-none">OLGA PRUDKA</h3> -->
+                    </div>
                     <div class="image-div image-div-type2">
                         <img src="media/Olga_Prudka_1.png" alt="">
                         <img src="media/Olga_Prudka_2.png" alt="">
@@ -235,7 +242,7 @@
         </div>
         <div id="page4">
             <h1>About Obys</h1>
-            <div class="underline"></div>
+            <div class="underline first-underline1"></div>
             <h3 id="firstH3">Our agency is about people who love creating, designing and developing wow projects. In the
                 same time we
                 are a boutique agency that is more than the collective. We learn and grow, win and celebrate together.
@@ -273,7 +280,7 @@
                 </div>
             </div>
 
-            <div class="underline"></div>
+            <div class="underline second-underline1"></div>
             <h5>We work with</h5>
         </div>
         <!-- <h5>We work with</h5> -->
@@ -300,7 +307,7 @@
 
         <div id="footer" data-scroll>
             <h1>Let's Create<i class="ri-arrow-right-line"></i></h1>
-            <div class="underline"></div>
+            <div class="underline first-underline2"></div>
             <div id="footer-div">
                 <div class="box">
                     <h5>Socials</h5>
@@ -322,7 +329,7 @@
                     <h4>info@obys.agency</h4>
                 </div>
             </div>
-            <div class="underline"></div>
+            <div class="underline second-underline2"></div>
             <h3 id="footerH3">Obys Agency © 2024</h3>
         </div>
     </div>

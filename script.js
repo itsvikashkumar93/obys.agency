@@ -1,4 +1,4 @@
-document.body.style.cursor = "none"; 
+document.body.style.cursor = "none";
 
 
 
@@ -146,17 +146,6 @@ function sheryAnimation() {
 
         gooey: true
     })
-
-    // document.querySelector("#page3 h3").addEventListener("mouseover", function () {
-    //     Shery.textAnimate("#page3 h3", {
-    //         style: 5,
-    //         y: 10,
-    //         delay: 0.1,
-    //         duration: 0.4,
-    //         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    //         multiplier: 0.1,
-    //     })
-    // });
 }
 
 function cursorAnimation() {
@@ -270,27 +259,121 @@ function gsapWithScroll() {
     gsap.from("#page3-div h1", {
         opacity: 0,
         y: 100,
-        duration: 0.5,
+        // duration: 0.5,
         scrollTrigger: {
             trigger: "#page3-div h1",
             scroller: "#main",
             // markers: true,
             start: "top 90%",
             end: "top 70%",
-            scrub: 2
+            scrub: 3
         }
     })
 
-    gsap.to(".underline", {
+    // For #page3-div2 #box1 .underline-small
+    gsap.to("#box1 .underline-small", {
         "--width": "100%",
         scrollTrigger: {
-            trigger: ".underline",
+            trigger: "#box1 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box2 .underline-small
+    gsap.to("#box2 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box2 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box3 .underline-small
+    gsap.to("#box3 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box3 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box4 .underline-small
+    gsap.to("#box4 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box4 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box5 .underline-small
+    gsap.to("#box5 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box5 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 95%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box6 .underline-small
+    gsap.to("#box6 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box6 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // gsap.to("#box1 .underline-small", {
+    //     width: "100%",
+    //     duration: 0.5,
+    //     scrollTrigger: {
+    //         trigger: ".underline-small",
+    //         scroller: "#main",
+    //         // markers: true,
+    //         start: "top 90%",
+    //         end: "top 65%",
+    //         scrub: 2,
+    //         // stagger: 0.2
+    //     }
+    // })
+
+
+    // For #page3-div .underline
+    gsap.to("#page3-div .underline", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#page3-div .underline",
             scroller: "#main",
             // markers: true,
             start: "top 90%",
             end: "top 65%",
             scrub: 2,
-        },
+        }
     });
 
     // gsap.to("#page3-div .underline", {
@@ -308,73 +391,157 @@ function gsapWithScroll() {
     //         // stagger: 2
     //     }
     // })
-    gsap.to("#page4 .underline", {
-        // opacity: 1,
-        // backgroundColor: "#ffffffc4",
-        width: "100%",
-        duration: 0.5,
+
+    // for #page4 h1
+    gsap.from("#page4 h1", {
+        opacity: 0,
+        y: 100,
+        // duration: 0.5,
         scrollTrigger: {
-            trigger: "#page4 .underline",
+            trigger: "#page4 h1",
             scroller: "#main",
             // markers: true,
             start: "top 90%",
-            end: "top 65%",
+            end: "top 70%",
+            scrub: 3
+        }
+    })
+
+    // for #page4 #firstH3
+    gsap.from("#page4 #firstH3", {
+        opacity: 0,
+        y: 100,
+        scrollTrigger: {
+            trigger: "#page4 #firstH3",
+            scroller: "#main",
+            start: "top 90%",
+            end: "top 70%",
             scrub: 2
-            // stagger: 2
         }
     })
 
-    gsap.to("#box1 .underline-small", {
-        width: "100%",
-        duration: 0.5,
+    // for #page4 #page4-container p
+    gsap.from("#page4 #page4-container p", {
+        opacity: 0,
+        stagger: 0.3
+    })
+
+    // For #page4 .first-underline1
+    gsap.to("#page4 .first-underline1", {
+        "--width": "100%",
         scrollTrigger: {
-            trigger: ".underline-small",
+            trigger: "#page4 .first-underline1",
             scroller: "#main",
             // markers: true,
             start: "top 90%",
-            end: "top 65%",
-            scrub: 2,
-            // stagger: 0.2
+            end: "top 75%",
+            scrub: 3
+        }
+    });
+
+    // For #page4 .second-underline1
+    gsap.to("#page4 .second-underline1", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#page4 .second-underline1",
+            scroller: "#main",
+            // markers: true,
+            start: "top 95%",
+            end: "top 85%",
+            scrub: 3
+        }
+    });
+
+    // For #page4 h5
+    gsap.from("#page4 h5", {
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+            trigger: "#page4 h5",
+            scroller: "#main",
+            // markers: true,
+            start: "top 95%",
+            end: "top 85%",
+            scrub: 3
         }
     })
 
-    gsap.to("#box2 .underline-small", {
-        width: "100%",
-        duration: 0.5,
+    // for #footer h1
+    gsap.from("#footer h1", {
+        opacity: 0,
+        y: 100,
+        // duration: 0.5,
         scrollTrigger: {
-            trigger: "#box2 .underline-small",
+            trigger: "#footer h1",
             scroller: "#main",
             // markers: true,
             start: "top 90%",
-            end: "top 65%",
-            scrub: 2,
-            // stagger: 0.2
+            end: "top 70%",
+            scrub: 2
         }
     })
-    gsap.to("#box3 .underline-small", {
-        width: "100%",
-        duration: 0.5,
+
+    // For #footer .underline2
+    gsap.to("#footer .first-underline2", {
+        "--width": "100%",
         scrollTrigger: {
-            trigger: "#box3 .underline-small",
+            trigger: "#footer .first-underline2",
             scroller: "#main",
             // markers: true,
-            start: "top 70%",
-            end: "top 55%",
-            scrub: 2,
-            // stagger: 0.2
+            start: "top 90%",
+            end: "top 75%"
+            // duration: 2
+            // scrub: 2,
         }
-    })
+    });
+
+    // For #footer .underline2
+    gsap.to("#footer .second-underline2", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#footer .second-underline2",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 85%"
+            // duration: 2
+            // scrub: 2,
+        }
+    });
+
+
 }
 
+// For #page3 headings - text animation
+function textAnimation() {
+    const h3Holder = document.querySelector(".h3Holder");
+    const h3 = document.querySelectorAll("#page3 #page3-div2 .image-div-container .h3Holder h3");
+    h3Holder.addEventListener("mouseenter", () => {
+        h3.forEach((elem) => {
+            gsap.to(elem, {
+                y: -40,
+            });
+        });
+    });
+
+    h3Holder.addEventListener("mouseleave", () => {
+        h3.forEach((elem) => {
+            gsap.to(elem, {
+                y: 0,
+            });
+        });
+    });
+}
 
 // loadingAnimation();
 locomotiveAnimation();
 sheryAnimation();
 cursorAnimation();
-// textillateAnimation();
 gsapWithScroll()
 handleFixedNav();
+textAnimation();
 
+// textillateAnimation();
 // Check kro
 // gsap.from("#nav", {
 //     opacity: 0,
