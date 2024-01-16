@@ -1,0 +1,768 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain light";
+    color: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Shery JS ke mousefollower ko target krne ke liye */
+/* .mousefollower {
+    border: 2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    scale: 2;
+    mix-blend-mode: difference;
+} */
+
+/* 
+#crsr {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    border: 1px solid #ffffff95;
+    transform: translate(-50%, -50%); */
+/* Taaki curser div ke center ko follow kre */
+/* position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
+} */
+
+#loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #000;
+    z-index: 999;
+    color: #fff;
+    padding: 22vh 10vw;
+}
+
+#loader .line {
+    /* background-color: green; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+
+#line1-part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3vw;
+}
+
+#line1-part1 h5,
+#line1-part1 h6 {
+    font-size: 4vw;
+    font-family: "Silk Serif";
+    font-weight: 100;
+}
+
+#line1-part1 h5 {
+    /* background-color: red; */
+    width: 7vw;
+    text-align: right;
+}
+
+#loader h1 {
+    font-size: 6.5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#loader h2 {
+    font-size: 5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+    /* animation-name: fontChange; */
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes fontChange {
+    0% {
+        font-family: "Plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    48% {
+        font-family: "Plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+
+    50% {
+        font-family: "Silk Serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    100% {
+        font-family: "Silk Serif";
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 0;
+    }
+}
+
+#main {
+    position: relative;
+    background-color: #151515;
+    z-index: 99;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    /* z-index: 100; */
+}
+
+#page1 #nav {
+    padding: 3.2vw 5.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-part1{
+    display: flex;
+    align-items: center;
+    gap: 2.7vw;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.3vw;
+}
+
+#nav-part2 h4 {
+    font-style: 0.7vw;
+    font-weight: 500;
+}
+
+/* 
+#center {
+    position: relative;
+} */
+
+.hero {
+    /* background-color: red; */
+    /* width: 72%; */
+    width: fit-content;
+    height: fit-content;
+    margin-left: 28%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.hero:nth-child(2) {
+    margin-top: 15vh;
+}
+
+.hero h1 {
+    font-size: 7.3vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    font-weight: 500;
+    position: relative;
+}
+
+#hero1 {
+    overflow: visible;
+}
+
+#hero1::before {
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 0%;
+}
+
+#hero3 h2 {
+    font-size: 7.3vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    border-bottom: 0.4vw solid #fff;
+    padding-bottom: 0.6vw;
+    font-weight: 500;
+    /* transition: all ease 0.3s; */
+}
+
+#hero3 h2:hover {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    /* font-weight: 500; */
+    border-bottom: 0.4vw solid #ffffff00;
+}
+
+#hero3 {
+    position: relative;
+    z-index: 999;
+}
+
+#flag {
+    height: 28vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    padding: 10vh 0;
+    /* padding-top: 18vh; */
+    padding-left: 28vw;
+    position: relative;
+    /* z-index: 102; */
+    /* margin-top: 10vh; */
+}
+
+#play-crsr {
+    height: 9.5vw;
+    width: 9.5vw;
+    border-radius: 50%;
+    background-color: #FFA63D;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: -5%;
+    left: 80%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-crsr i {
+    font-size: 2vw;
+}
+
+#page2 #video-container {
+    height: 85%;
+    width: 100%;
+    position: relative;
+    background-image: url("media/Showreel-2022-preview-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#page2 #video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#page2 #video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    /* padding-left: 28vw; */
+}
+
+#page3 #page3-div {
+    padding-left: 28vw;
+    padding-right: 6vw;
+}
+
+#page3-div h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#page3-div h1::before {
+    content: "02";
+    position: absolute;
+    font-family: "Silk Serif";
+    font-size: 3vw;
+    font-weight: 500;
+    left: -15%;
+    top: 9%;
+}
+
+#page3-div2 {
+    /* background-color: red; */
+    padding: 10vh 5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.image-div-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: fit-content;
+    /* background-color: grey; */
+}
+
+.image-div-container h3 {
+    font-size: 2.2vw;
+}
+
+.image-div {
+    height: 40vw;
+    width: 31vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* background-color: green; */
+}
+
+.image-div-type2 {
+    height: 30vw;
+    width: 23vw;
+}
+
+.image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: top; */
+}
+
+.bottom-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-div h5 {
+    font-size: 1vw;
+    font-weight: 500;
+    width: 50%;
+}
+
+.bottom-div h6 {
+    font-size: 1vw;
+    font-weight: 500;
+    /* width: 50%; */
+}
+
+.underline-small {
+    /* width: 100%; */
+    width: 0%;
+    height: 0.2vh;
+    background-color: #ffffffc4;
+    /* margin-top: 2vw; */
+}
+
+#box3 {
+    margin-top: 15vh;
+}
+
+#box5 {
+    margin-top: -23vh;
+}
+
+#box6 {
+    margin-top: 7vh;
+    margin-left: 2vw;
+}
+
+.page3-circle {
+    width: 22vw;
+    height: 22vw;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 0.1vw solid #ffffffd1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3-circle .circle-in {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 0 2vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    transition: all ease 0.5s;
+}
+
+.page3-circle .circle-in p {
+    color: #000;
+    width: fit-content;
+    /* width: 90%; */
+    font-size: 1vw;
+    font-weight: 500;
+    scale: 0;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.4s;
+}
+
+.page3-circle1 {
+    margin-top: 52vh;
+    margin-left: 8vw;
+}
+
+.page3-circle1 svg {
+    height: 14vh;
+}
+
+.page3-circle2 {
+    margin-top: 2vh;
+    margin-left: 1vw;
+}
+
+.page3-circle2 svg {
+    height: 14vh;
+    rotate: -45deg;
+}
+
+.page3-circle3 {
+    margin-top: 60vh;
+    margin-left: 7vw;
+}
+
+.page3-circle3 svg {
+    height: 14vh;
+    rotate: -90deg;
+}
+
+.page3-circle:hover .circle-in {
+    scale: 1;
+}
+
+.page3-circle:hover .circle-in p {
+    scale: 1;
+    opacity: 1;
+}
+
+#page3-div3{
+    width: 100%;
+    /* height: ; */
+    padding: 15vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3-div3 .page3-circle4{
+    background-color: #FFA63D;
+    border: none;
+    transition: all ease 0.3s;
+}
+#page3-div3 .page3-circle4 h5{
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+
+#page3-div3 .page3-circle4:hover{
+    scale: 0.9;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 6vw;
+}
+
+#page4 h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    /* border-bottom: 0.1vw solid #ffffffb3; */
+}
+
+#page4 h1::before {
+    content: "03";
+    position: absolute;
+    font-family: "Silk Serif";
+    font-size: 3vw;
+    font-weight: 500;
+    left: -15%;
+    top: 9%;
+}
+
+.underline {
+    /* width: 100%; */
+    width: 0%;
+    height: 0.2vh;
+    margin-top: 13vh;
+    background-color: #ffffffc4;
+}
+
+#page4 #firstH3 {
+    margin-top: 3vw;
+    font-size: 2.3vw;
+    font-weight: 500;
+    width: 56%;
+}
+
+#page4-container {
+    padding-top: 8vh;
+    display: flex;
+    /* justify-content: center; */
+    gap: 2.5vw;
+}
+
+#page4-container img {
+    width: 32vw;
+    height: 85vh;
+    object-fit: cover;
+}
+
+#para-holder {
+    width: 19vw;
+}
+
+#para-holder p {
+    font-size: 1vw;
+    line-height: 1.4vw;
+    /* font-weight: 600; */
+}
+
+#para-holder p:nth-child(2) {
+    margin-top: 2vw;
+
+}
+
+#page4-list {
+    background-color: #3F7DF4;
+    width: 34vw;
+    padding: 6vh 5vw;
+    /* top: -10%; */
+    /* Not working */
+    /* left: 10%; */
+    position: relative;
+    margin-top: -30vh;
+    margin-left: 23vw;
+}
+
+#page4-list .elem {
+    height: 17vh;
+    /* background-color: red; */
+    border-bottom: 0.3vh solid #ffffffce;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 3vw; */
+}
+
+#page4-list .elem h3 {
+    font-size: 1.4vw;
+    width: 48%;
+    font-weight: 500;
+}
+
+#page4-list .elem h4 {
+    width: 45%;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page4 h5{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-top: 3vh;
+}
+
+#page5 {
+    /* min-height: 100vh; */
+    height: fit-content;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    padding: 12vh 0;
+}
+
+.page5-elem {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* margin-bottom: 1vw; */
+    /* position: relative; */
+    /* width: 100%; */
+    /* height: fit-content; */
+    /* background-color: red; */
+}
+
+.page5-elem h1 {
+    font-size: 7.5vw;
+    line-height: 7.9vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 1.6vw;
+    /* margin-right: 16px; */
+    animation-name: moving;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.page5-elem span,
+.page5-elem2 span {
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    font-style: italic;
+    font-family: "silk serif";
+}
+
+.page5-elem2 {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* margin-bottom: 1vw; */
+}
+
+.page5-elem2 h1 {
+    font-size: 7.5vw;
+    line-height: 7.9vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 1.6vw;
+    transform: translateX(calc(-100% - 4px - 1.6vw));
+    animation-name: moving2;
+    animation-duration: 17s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 4px - 1.6vw));
+    }
+}
+
+@keyframes moving2 {
+    from {
+        transform: translateX(calc(-100% - 4px - 1.6vw));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+#footer {
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    padding-left: 28vw;
+    padding-right: 6vw;
+    position: relative;
+}
+
+#footer h1 {
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    /* border-bottom: 0.1vw solid #ffffffb3; */
+}
+
+#footer h1::before {
+    content: "04";
+    position: absolute;
+    font-family: "Silk Serif";
+    font-size: 3vw;
+    font-weight: 500;
+    left: -15%;
+    top: 9%;
+}
+
+#footer h1 i {
+    -webkit-text-stroke: 0.1vw #ffffffbe;
+    color: transparent;
+    font-weight: 500;
+    margin-left: 1vw;
+
+}
+
+#footer-div {
+    display: flex;
+    gap: 15vw;
+    margin-top: 13vh;
+}
+
+#footer-div .box h5 {
+    font-size: 1.1vw;
+    font-weight: 500;
+    margin-bottom: 3vh;
+}
+
+#footer-div .box h4 {
+    font-size: 1.6vw;
+    font-weight: 500;
+}
+
+#footer #footerH3 {
+    margin-top: 6vh;
+    font-weight: 500;
+}
+
+
+/* Very important for gooey effect */
+
+._canvas_container {
+    z-index: 999999 !important;
+    pointer-events: none;
+}
