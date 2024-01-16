@@ -1,3 +1,7 @@
+document.body.style.cursor = "none"; 
+
+
+
 // Locomotive 
 function locomotiveAnimation() {
     gsap.registerPlugin(ScrollTrigger);
@@ -136,9 +140,10 @@ function handleFixedNav() {
 
 function sheryAnimation() {
     Shery.imageEffect(".image-div", {
-        style: 5,
+        style: 2,
         // debug: true,
-        config: { "a": { "value": 1.37, "range": [0, 30] }, "b": { "value": -0.91, "range": [-1, 1] }, "zindex": { "value": -9996999, "range": [-9999999, 9999999] }, "aspect": { "value": 0.7666557722625823 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": false }, "growSize": { "value": 4, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.5, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": false }, "maskVal": { "value": 1, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 1 }, "noise_speed": { "value": 0.76, "range": [0, 10] }, "metaball": { "value": 0.6, "range": [0, 2] }, "discard_threshold": { "value": 0.5, "range": [0, 1] }, "antialias_threshold": { "value": 0, "range": [0, 0.1] }, "noise_height": { "value": 0.37, "range": [0, 2] }, "noise_scale": { "value": 7.63, "range": [0, 100] } },
+        config: { "resolutionXY": { "value": 100 }, "distortion": { "value": true }, "mode": { "value": -10 }, "mousemove": { "value": 3 }, "modeA": { "value": 1 }, "modeN": { "value": 3 }, "speed": { "value": 1, "range": [-500, 500], "rangep": [-10, 10] }, "frequency": { "value": 50, "range": [-800, 800], "rangep": [-50, 50] }, "angle": { "value": 0.5, "range": [0, 3.141592653589793] }, "waveFactor": { "value": 1.4, "range": [-3, 3] }, "color": { "value": 10212607 }, "pixelStrength": { "value": 3, "range": [-20, 100], "rangep": [-20, 20] }, "quality": { "value": 5, "range": [0, 10] }, "contrast": { "value": 1, "range": [-25, 25] }, "brightness": { "value": 1, "range": [-1, 25] }, "colorExposer": { "value": 0.18, "range": [-5, 5] }, "strength": { "value": 0.2, "range": [-40, 40], "rangep": [-5, 5] }, "exposer": { "value": 8, "range": [-100, 100] }, "zindex": { "value": -9996999, "range": [-9999999, 9999999] }, "aspect": { "value": 0.7666557722625823 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": false }, "growSize": { "value": 4, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.5, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": false }, "maskVal": { "value": 1, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 0 }, "noise_speed": { "value": 0.76, "range": [0, 10] }, "metaball": { "value": 0.6, "range": [0, 2] }, "discard_threshold": { "value": 0.5, "range": [0, 1] }, "antialias_threshold": { "value": 0, "range": [0, 0.1] }, "noise_height": { "value": 0.37, "range": [0, 2] }, "noise_scale": { "value": 7.63, "range": [0, 100] }, "a": { "value": 1.37, "range": [0, 30] }, "b": { "value": -0.91, "range": [-1, 1] } },
+
         gooey: true
     })
 
@@ -233,7 +238,31 @@ function cursorAnimation() {
             opacity: 0,
             duration: 0.3
         })
+        // console.log("Leaving")
     })
+
+    // For gooey effect container mouse cursor hide
+    var imgContainer = document.querySelectorAll(".image-div-container .image-div");
+    const mouseFollower = document.querySelectorAll(".mousefollower");
+
+    imgContainer.forEach(function (el) {
+        el.addEventListener("mouseenter", function () {
+            mouseFollower.forEach(function (e) {
+                e.classList.add("hide");
+                console.log("hello")
+            })
+            // document.body.style.cursor = "none"; 
+        });
+
+        el.addEventListener("mouseleave", function () {
+            mouseFollower.forEach(function (e) {
+                e.classList.remove("hide");
+                console.log("hello")
+            })
+            // document.body.style.cursor = "auto";
+        });
+    })
+
 }
 
 function gsapWithScroll() {
@@ -245,28 +274,40 @@ function gsapWithScroll() {
         scrollTrigger: {
             trigger: "#page3-div h1",
             scroller: "#main",
-            markers: true,
+            // markers: true,
             start: "top 90%",
             end: "top 70%",
             scrub: 2
         }
     })
 
-    gsap.to("#page3-div .underline", {
-        // opacity: 1,
-        // backgroundColor: "#ffffffc4",
-        width: "100%",
-        duration: 0.5,
+    gsap.to(".underline", {
+        "--width": "100%",
         scrollTrigger: {
             trigger: ".underline",
             scroller: "#main",
-            markers: true,
+            // markers: true,
             start: "top 90%",
             end: "top 65%",
-            scrub: 2
-            // stagger: 2
-        }
-    })
+            scrub: 2,
+        },
+    });
+
+    // gsap.to("#page3-div .underline", {
+    //     // opacity: 1,
+    //     // backgroundColor: "#ffffffc4",
+    //     width: "100%",
+    //     duration: 0.5,
+    //     scrollTrigger: {
+    //         trigger: ".underline",
+    //         scroller: "#main",
+    //         // markers: true,
+    //         start: "top 90%",
+    //         end: "top 65%",
+    //         scrub: 2
+    //         // stagger: 2
+    //     }
+    // })
     gsap.to("#page4 .underline", {
         // opacity: 1,
         // backgroundColor: "#ffffffc4",
@@ -275,7 +316,7 @@ function gsapWithScroll() {
         scrollTrigger: {
             trigger: "#page4 .underline",
             scroller: "#main",
-            markers: true,
+            // markers: true,
             start: "top 90%",
             end: "top 65%",
             scrub: 2
@@ -289,7 +330,7 @@ function gsapWithScroll() {
         scrollTrigger: {
             trigger: ".underline-small",
             scroller: "#main",
-            markers: true,
+            // markers: true,
             start: "top 90%",
             end: "top 65%",
             scrub: 2,
@@ -303,7 +344,7 @@ function gsapWithScroll() {
         scrollTrigger: {
             trigger: "#box2 .underline-small",
             scroller: "#main",
-            markers: true,
+            // markers: true,
             start: "top 90%",
             end: "top 65%",
             scrub: 2,
@@ -316,7 +357,7 @@ function gsapWithScroll() {
         scrollTrigger: {
             trigger: "#box3 .underline-small",
             scroller: "#main",
-            markers: true,
+            // markers: true,
             start: "top 70%",
             end: "top 55%",
             scrub: 2,
@@ -326,7 +367,7 @@ function gsapWithScroll() {
 }
 
 
-loadingAnimation();
+// loadingAnimation();
 locomotiveAnimation();
 sheryAnimation();
 cursorAnimation();
