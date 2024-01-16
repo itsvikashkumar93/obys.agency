@@ -283,7 +283,7 @@ function gsapWithScroll() {
         }
     })
 
-    gsap.to("#box1 .underline-small, #box2 .underline-small, #box3 .underline-small, #box4 .underline-small, #box5 .underline-small, #box6 .underline-small", {
+    gsap.to("#box1 .underline-small", {
         width: "100%",
         duration: 0.5,
         scrollTrigger: {
@@ -296,10 +296,37 @@ function gsapWithScroll() {
             // stagger: 0.2
         }
     })
+
+    gsap.to("#box2 .underline-small", {
+        width: "100%",
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#box2 .underline-small",
+            scroller: "#main",
+            markers: true,
+            start: "top 90%",
+            end: "top 65%",
+            scrub: 2,
+            // stagger: 0.2
+        }
+    })
+    gsap.to("#box3 .underline-small", {
+        width: "100%",
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#box3 .underline-small",
+            scroller: "#main",
+            markers: true,
+            start: "top 70%",
+            end: "top 55%",
+            scrub: 2,
+            // stagger: 0.2
+        }
+    })
 }
 
 
-// loadingAnimation();
+loadingAnimation();
 locomotiveAnimation();
 sheryAnimation();
 cursorAnimation();
