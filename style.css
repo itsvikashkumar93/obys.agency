@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Plain light";
+    src: url(Font-Family/plain-light-webfont.woff);
+}
+
+@font-face {
+    font-family: "Plain light";
+    src: url(Font-Family/plain-regular-webfont.woff);
+}
+
+@font-face {
+    font-family: "Silk Serif";
+    src: url(Font-Family/silkserif-regularitalic-webfont.woff);
+}
+
+@font-face {
+    font-family: "Silk Serif";
+    src: url(Font-Family/silkserif-lightitalic-webfont.woff);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -203,7 +223,7 @@ body {
     position: absolute;
     font-size: 3vw;
     font-weight: 100;
-    font-family: "silk serif";
+    font-family: "Silk Serif";
     left: -12%;
     top: 0%;
 }
@@ -656,7 +676,7 @@ body {
     color: transparent;
     font-weight: 500;
     font-style: italic;
-    font-family: "silk serif";
+    font-family: "Silk Serif";
 }
 
 .page5-elem2 {
