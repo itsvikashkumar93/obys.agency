@@ -1,7 +1,6 @@
 document.body.style.cursor = "none";
 
 
-
 // Locomotive 
 function locomotiveAnimation() {
     gsap.registerPlugin(ScrollTrigger);
@@ -533,7 +532,7 @@ function textAnimation() {
     });
 }
 
-// loadingAnimation();
+loadingAnimation();
 locomotiveAnimation();
 sheryAnimation();
 cursorAnimation();
