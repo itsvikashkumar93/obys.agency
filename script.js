@@ -511,6 +511,252 @@ function gsapWithScroll() {
 
 }
 
+function gsapForMobile() {
+    // for #page3-div h1
+    gsap.from("#page3-div h1", {
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+            trigger: "#page3-div h1",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    })
+
+    // For #page3-div .underline
+    gsap.to("#page3-div .underline", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#page3-div .underline",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 2,
+        }
+    });
+
+
+    // For #page3-div2 #box1 .underline-small
+    gsap.to("#box1 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box1 .underline-small",
+            scroller: "#main",
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box2 .underline-small
+    gsap.to("#box2 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box2 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box3 .underline-small
+    gsap.to("#box3 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box3 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box4 .underline-small
+    gsap.to("#box4 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box4 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box5 .underline-small
+    gsap.to("#box5 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box5 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 95%",
+            scrub: 3
+        }
+    });
+
+    // For #page3-div2 #box6 .underline-small
+    gsap.to("#box6 .underline-small", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#box6 .underline-small",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    });
+
+
+    // for #page4 h1
+    gsap.from("#page4 h1", {
+        opacity: 0,
+        y: 50,
+        // duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page4 h1",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    })
+
+    // For #page4 .underline
+    gsap.to("#page4 .underline", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#page4 .underline",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3,
+        }
+    });
+
+    // for #page4 #firstH3
+    gsap.from("#page4 #firstH3", {
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+            trigger: "#page4 #firstH3",
+            scroller: "#main",
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    })
+
+    // for #page4 #page4-container p
+    gsap.from("#page4 #page4-container p", {
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+            trigger: "#page4 #page4-container p",
+            scroller: "#main",
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    })
+
+    // For #page4 .first-underline1
+    gsap.to("#page4 .first-underline1", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#page4 .first-underline1",
+            scroller: "#main",
+            // markers: true,
+            start: "top 90%",
+            end: "top 75%",
+            scrub: 3
+        }
+    });
+
+    // For #page4 .second-underline1
+    gsap.to("#page4 .second-underline1", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#page4 .second-underline1",
+            scroller: "#main",
+            // markers: true,
+            start: "top 95%",
+            end: "top 85%",
+            scrub: 3
+        }
+    });
+
+    // For #page4 h5
+    gsap.from("#page4 h5", {
+        opacity: 0,
+        y: 50,
+        scrollTrigger: {
+            trigger: "#page4 h5",
+            scroller: "#main",
+            // markers: true,
+            start: "top 95%",
+            end: "top 85%",
+            scrub: 3
+        }
+    })
+
+    // for #footer h1
+    gsap.from("#footer h1", {
+        opacity: 0,
+        y: 50,
+        // duration: 0.5,
+        scrollTrigger: {
+            trigger: "#footer h1",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+        }
+    })
+
+    // For #footer .underline2
+    gsap.to("#footer .underline", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#footer .underline",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            // duration: 2
+            scrub: 3
+        }
+    });
+
+    // For #footer .underline2
+    gsap.to("#footer .second-underline2", {
+        "--width": "100%",
+        scrollTrigger: {
+            trigger: "#footer .second-underline2",
+            scroller: "#main",
+            // markers: true,
+            start: "top 100%",
+            end: "top 90%",
+            scrub: 3
+            // duration: 2
+        }
+    });
+
+}
+
 // For #page3 headings - text animation
 function textAnimation() {
     const h3Holder = document.querySelector(".h3Holder");
@@ -532,10 +778,9 @@ function textAnimation() {
     });
 }
 
-loadingAnimation();
+// loadingAnimation();
 locomotiveAnimation();
 // sheryAnimation();
-gsapWithScroll();
 handleFixedNav();
 textAnimation();
 
@@ -543,13 +788,17 @@ textAnimation();
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     //sheryjs ka code run karo eha par
     cursorAnimation();
-    sheryAnimation()
+    sheryAnimation();
+    gsapWithScroll();
+
 }
-else{
+else {
     var extraImg = document.querySelectorAll(".extraImg");
-    extraImg.forEach(function(img){
+    extraImg.forEach(function (img) {
         img.style.display = "none";
     })
+
+    gsapForMobile();
 }
 
 // textillateAnimation();

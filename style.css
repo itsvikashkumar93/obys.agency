@@ -920,19 +920,13 @@ body {
     }
 
     #flag {
-        height: 28vw;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
+        display: none;
     }
 
     #page2 {
-        height: 55vh;
+        height: 50vh;
         padding: 0;
-        padding-top: 10vh;
+        padding-top: 7vh;
         padding-left: 0vw;
     }
 
@@ -1176,7 +1170,7 @@ body {
     }
 
     #footer {
-        height: 110vh;
+        min-height: 100vh;
         padding-top: 5vh;
         padding-left: 5vw;
         padding-right: 6vw;
