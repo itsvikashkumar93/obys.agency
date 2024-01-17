@@ -172,8 +172,8 @@ body {
     gap: 2.7vw;
     position: fixed;
     z-index: 9999;
-    top: 5%;
-    left: 3%;
+    top: 6%;
+    left: 5%;
 }
 
 #nav-part2 {
@@ -429,7 +429,7 @@ body {
     --width: 0%;
 }
 
-.underline-small::after{
+.underline-small::after {
     content: "";
     width: var(--width);
     height: 0.2vh;
@@ -833,4 +833,123 @@ body {
 ._canvas_container {
     z-index: 999 !important;
     pointer-events: none;
+}
+
+
+
+/* Making it responsive */
+@media (max-width: 600px) {
+
+    #main {
+        position: relative;
+        background-color: #151515;
+        z-index: 99;
+    }
+
+    #nav-part1 {
+        width: 100%;
+        padding-right: 10vw;
+        justify-content: space-between;
+        gap: 0;
+        top: 3%;
+        left: 5%;
+    }
+
+    #nav-part1 svg:nth-child(2) {
+        height: 2.7vh;
+    }
+
+    #page1 {
+        height: 50vh;
+        width: 100%;
+        background-color: #151515;
+        position: relative;
+        /* z-index: 100; */
+    }
+
+    #page1 #nav {
+        padding: 3.2vw 5.2vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #nav-part2 {
+        display: none;
+    }
+
+    .hero {
+        margin-left: 5%;
+    }
+
+    .hero:nth-child(2) {
+        margin-top: 20vh;
+    }
+
+    .hero h1 {
+        font-size: 10vw;
+        line-height: 10.3vw;
+        letter-spacing: -0.5vw;
+    }
+
+    #hero1 {
+        overflow: visible;
+    }
+
+    #hero1::before {
+        content: "01";
+        font-size: 5vw;
+        left: 0%;
+        top: -80%;
+    }
+
+    #hero3 h2 {
+        font-size: 10vw;
+        line-height: 10.3vw;
+        letter-spacing: -0.5vw;
+        border-bottom: 1vw solid #fff;
+    }
+
+    #hero3 h2:hover {
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        border-bottom: 0.4vw solid #ffffff00;
+    }
+
+    #flag {
+        height: 28vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
+    #page2 {
+        height: 65vh;
+        padding-top: 6vh;
+        padding-left: 0vw;
+    }
+
+    #play-crsr {
+        height: 25vw;
+        width: 25vw;
+        top: 50%;
+        left: 50%;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #play-crsr i {
+        font-size: 6vw;
+    }
+
+    #page2 #video-container {
+        height: 100%;
+    }
+
+
 }
