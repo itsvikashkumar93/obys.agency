@@ -534,11 +534,23 @@ function textAnimation() {
 
 loadingAnimation();
 locomotiveAnimation();
-sheryAnimation();
-cursorAnimation();
+// sheryAnimation();
 gsapWithScroll();
 handleFixedNav();
 textAnimation();
+
+
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //sheryjs ka code run karo eha par
+    cursorAnimation();
+    sheryAnimation()
+}
+else{
+    var extraImg = document.querySelectorAll(".extraImg");
+    extraImg.forEach(function(img){
+        img.style.display = "none";
+    })
+}
 
 // textillateAnimation();
 // Check kro
