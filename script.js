@@ -5,34 +5,28 @@ document.body.style.cursor = "none";
 function locomotiveAnimation() {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector("#main"),
         smooth: true
     });
-    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+
     locoScroll.on("scroll", ScrollTrigger.update);
 
-    // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
     ScrollTrigger.scrollerProxy("#main", {
         scrollTop(value) {
             return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-        }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+        },
         getBoundingClientRect() {
             return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
         },
-        // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
         pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
     });
 
-    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.refresh();
 }
-
 
 function loadingAnimation() {
     var tl = gsap.timeline();
@@ -83,52 +77,17 @@ function loadingAnimation() {
     gsap.from("#hero1 h1, #hero2 h1, #hero3 h2, #hero4 h1", {
         opacity: 0,
         y: 120,
-        delay: 6,
-        // duration: 0.3,
-        // stagger: 0.2
+        delay: 6
     })
 
-
-
-    // ----------------------------------------------------------------------------
-
-    // tl.to("#loader", {
-    //     opacity: 0,
-    //     duration: 0.2,
-    //     delay: 3.5
-    // })
-
-    // tl.from("#page1", {
-    //     delay: 0.2,
-    //     y: 1600,
-    //     opacity: 0
-    // })
-
-    // tl.to("#loader", {
-    //     display: "none"
-    // })
-
 }
-
-// For cursor moving effect
-// function cursorAnimation() {
-//     // First select document i.e. html ko select kro
-//     document.addEventListener("mousemove", function (dets) {
-//         gsap.to("#crsr", {
-//             left: dets.x,
-//             top: dets.y
-//         })
-//     })
-
 
 // Function to handle fixed navigation
 function handleFixedNav() {
     const navPart1 = document.getElementById('nav-part1');
-    const offset = 200; // Adjust this offset based on your design
+    const offset = 200;
 
-    // Listen to scroll events
     window.addEventListener('scroll', function () {
-        // Add or remove the 'fixed' class based on the scroll position
         if (window.scrollY > offset) {
             navPart1.classList.add('fixed');
         } else {
@@ -347,21 +306,6 @@ function gsapWithScroll() {
         }
     });
 
-    // gsap.to("#box1 .underline-small", {
-    //     width: "100%",
-    //     duration: 0.5,
-    //     scrollTrigger: {
-    //         trigger: ".underline-small",
-    //         scroller: "#main",
-    //         // markers: true,
-    //         start: "top 90%",
-    //         end: "top 65%",
-    //         scrub: 2,
-    //         // stagger: 0.2
-    //     }
-    // })
-
-
     // For #page3-div .underline
     gsap.to("#page3-div .underline", {
         "--width": "100%",
@@ -374,22 +318,6 @@ function gsapWithScroll() {
             scrub: 2,
         }
     });
-
-    // gsap.to("#page3-div .underline", {
-    //     // opacity: 1,
-    //     // backgroundColor: "#ffffffc4",
-    //     width: "100%",
-    //     duration: 0.5,
-    //     scrollTrigger: {
-    //         trigger: ".underline",
-    //         scroller: "#main",
-    //         // markers: true,
-    //         start: "top 90%",
-    //         end: "top 65%",
-    //         scrub: 2
-    //         // stagger: 2
-    //     }
-    // })
 
     // for #page4 h1
     gsap.from("#page4 h1", {
@@ -489,8 +417,6 @@ function gsapWithScroll() {
             // markers: true,
             start: "top 90%",
             end: "top 75%"
-            // duration: 2
-            // scrub: 2,
         }
     });
 
@@ -503,8 +429,6 @@ function gsapWithScroll() {
             // markers: true,
             start: "top 100%",
             end: "top 85%"
-            // duration: 2
-            // scrub: 2,
         }
     });
 
@@ -538,7 +462,6 @@ function gsapForMobile() {
             scrub: 2,
         }
     });
-
 
     // For #page3-div2 #box1 .underline-small
     gsap.to("#box1 .underline-small", {
@@ -783,9 +706,7 @@ locomotiveAnimation();
 handleFixedNav();
 textAnimation();
 
-
 if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //sheryjs ka code run karo eha par
     cursorAnimation();
     sheryAnimation();
     gsapWithScroll();
@@ -799,22 +720,3 @@ else {
 
     gsapForMobile();
 }
-
-// textillateAnimation();
-// Check kro
-// gsap.from("#nav", {
-//     opacity: 0,
-//     delay: 6
-// }, "-=2")
-
-
-// function textillateAnimation(){
-//     gsap.from("#footer h1", {
-//         y: 20,
-//         opacity: 0,
-//         onStart: function(){
-//             $('#footer h1').textillate({ in: { effect: 'fadeIn' } });
-
-//         }
-//     })
-// }
