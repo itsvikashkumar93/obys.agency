@@ -34,10 +34,10 @@ body {
 
 /* Shery JS ke mousefollower ko target krne ke liye */
 .mousefollower {
-    border: 2px solid #fff;
+    border: 1.2vw solid #fff;
     background-color: rgb(255, 255, 255);
     transform: translate(-50%, -50%);
-    scale: 2;
+    scale: 1;
     mix-blend-mode: difference;
 }
 
