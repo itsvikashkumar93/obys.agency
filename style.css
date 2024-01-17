@@ -927,8 +927,9 @@ body {
     }
 
     #page2 {
-        height: 65vh;
-        padding-top: 6vh;
+        height: 55vh;
+        padding: 0;
+        padding-top: 10vh;
         padding-left: 0vw;
     }
 
@@ -951,5 +952,230 @@ body {
         height: 100%;
     }
 
+
+
+    #page3 {
+        padding-top: 13vh;
+    }
+
+    #page3 #page3-div {
+        padding-left: 5vw;
+        padding-right: 6vw;
+    }
+
+    #page3-div h1 {
+        font-size: 10vw;
+    }
+
+    #page3-div h1::before {
+        content: "02";
+        font-size: 5vw;
+        left: 0%;
+        top: -80%;
+    }
+
+    .underline {
+        margin-top: 4vh;
+    }
+
+    #page3-div2 {
+        padding: 10vh 5vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2vw;
+    }
+
+    .image-div-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        width: fit-content;
+        /* background-color: grey; */
+    }
+
+    .image-div-container h3 {
+        font-size: 2.2vw;
+    }
+
+    .hide {
+        opacity: 0 !important;
+    }
+
+    .image-div {
+        height: 40vw;
+        width: 31vw;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        /* background-color: green; */
+    }
+
+    .image-div-type2 {
+        height: 30vw;
+        width: 23vw;
+    }
+
+    .image-div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* object-position: top; */
+    }
+
+    .bottom-div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bottom-div h5 {
+        font-size: 1vw;
+        font-weight: 500;
+        width: 50%;
+    }
+
+    .bottom-div h6 {
+        font-size: 1vw;
+        font-weight: 500;
+        /* width: 50%; */
+    }
+
+    /* .underline-small {
+    width: 0%;
+    height: 0.2vh;
+    background-color: #ffffffc4;
+} */
+
+    .underline-small {
+        width: 100%;
+        height: 0.2vh;
+        position: relative;
+        --width: 0%;
+    }
+
+    .underline-small::after {
+        content: "";
+        width: var(--width);
+        height: 0.2vh;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #ffffffc4;
+    }
+
+    #box3 {
+        margin-top: 15vh;
+    }
+
+    #box5 {
+        margin-top: -23vh;
+    }
+
+    #box6 {
+        margin-top: 7vh;
+        margin-left: 2vw;
+    }
+
+    .page3-circle {
+        width: 22vw;
+        height: 22vw;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 0.1vw solid #ffffffd1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .page3-circle .circle-in {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #fff;
+        padding: 0 2vw;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scale: 0;
+        transition: all ease 0.5s;
+    }
+
+    .page3-circle .circle-in p {
+        color: #000;
+        width: fit-content;
+        /* width: 90%; */
+        font-size: 1vw;
+        font-weight: 500;
+        scale: 0;
+        opacity: 0;
+        transition: all ease 0.5s;
+        transition-delay: 0.4s;
+    }
+
+    .page3-circle1 {
+        margin-top: 52vh;
+        margin-left: 8vw;
+    }
+
+    .page3-circle1 svg {
+        height: 14vh;
+    }
+
+    .page3-circle2 {
+        margin-top: 2vh;
+        margin-left: 1vw;
+    }
+
+    .page3-circle2 svg {
+        height: 14vh;
+        rotate: -45deg;
+    }
+
+    .page3-circle3 {
+        margin-top: 60vh;
+        margin-left: 7vw;
+    }
+
+    .page3-circle3 svg {
+        height: 14vh;
+        rotate: -90deg;
+    }
+
+    .page3-circle:hover .circle-in {
+        scale: 1;
+    }
+
+    .page3-circle:hover .circle-in p {
+        scale: 1;
+        opacity: 1;
+    }
+
+    #page3-div3 {
+        width: 100%;
+        /* height: ; */
+        padding: 15vh 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #page3-div3 .page3-circle4 {
+        background-color: #FFA63D;
+        border: none;
+        transition: all ease 0.3s;
+    }
+
+    #page3-div3 .page3-circle4 h5 {
+        font-size: 1.1vw;
+        font-weight: 500;
+    }
+
+    #page3-div3 .page3-circle4:hover {
+        scale: 0.9;
+    }
 
 }
