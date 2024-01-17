@@ -536,7 +536,7 @@ loadingAnimation();
 locomotiveAnimation();
 sheryAnimation();
 cursorAnimation();
-gsapWithScroll()
+gsapWithScroll();
 handleFixedNav();
 textAnimation();
 
