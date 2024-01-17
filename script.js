@@ -67,7 +67,7 @@ function loadingAnimation() {
     tl.to("#loader", {
         opacity: 0,
         y: -1600,
-        duration: 0.8,
+        duration: 1.2,
         delay: 3.5
     })
 
@@ -778,9 +778,8 @@ function textAnimation() {
     });
 }
 
-// loadingAnimation();
+loadingAnimation();
 locomotiveAnimation();
-// sheryAnimation();
 handleFixedNav();
 textAnimation();
 

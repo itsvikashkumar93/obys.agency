@@ -110,6 +110,12 @@ body {
     animation-iteration-count: infinite;
 }
 
+#loader #waiting {
+    font-size: 1vw;
+    font-family: "Plain light";
+    font-weight: 500;
+    margin: 8vh 23vw;
+}
 
 @keyframes fontChange {
     0% {
@@ -822,7 +828,7 @@ body {
     font-weight: 500;
 }
 
-#footer-div .box #mail{
+#footer-div .box #mail {
     text-decoration: underline;
 }
 
@@ -843,6 +849,45 @@ body {
 
 /* Making it responsive */
 @media (max-width: 600px) {
+    #loader {
+        padding: 35vh 5vw;
+    }
+
+    #loader .line {
+        gap: 3vw;
+    }
+
+    #line1-part1 {
+        gap: 1.3vw;
+    }
+
+    #line1-part1 h5,
+    #line1-part1 h6 {
+        font-size: 6.3vw;
+        font-family: "Silk Serif";
+        font-weight: 100;
+    }
+
+    #line1-part1 h5 {
+        width: 10vw;
+        text-align: right;
+    }
+
+    #loader h1 {
+        font-size: 8vw;
+        font-weight: 500;
+    }
+
+    #loader h2 {
+        font-size: 6.2vw;
+        font-weight: 500;
+    }
+
+    #loader #waiting {
+        font-size: 3vw;
+        margin: 6vh 0vw;
+    }
+
     #main {
         position: relative;
         background-color: #151515;
