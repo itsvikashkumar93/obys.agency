@@ -145,6 +145,8 @@ function cursorAnimation() {
         })
     })
 
+    // By Clicking on the video container
+
     var flag = 0;
     videoContainer.addEventListener("click", function () {
         if (flag == 0) {
@@ -435,6 +437,27 @@ function gsapWithScroll() {
 
 }
 
+// For #page3 headings - text animation
+function textAnimation() {
+    const h3Holder = document.querySelector(".h3Holder");
+    const h3 = document.querySelectorAll("#page3 #page3-div2 .image-div-container .h3Holder h3");
+    h3Holder.addEventListener("mouseenter", () => {
+        h3.forEach((elem) => {
+            gsap.to(elem, {
+                y: -40,
+            });
+        });
+    });
+
+    h3Holder.addEventListener("mouseleave", () => {
+        h3.forEach((elem) => {
+            gsap.to(elem, {
+                y: 0,
+            });
+        });
+    });
+}
+
 function gsapForMobile() {
     // for #page3-div h1
     gsap.from("#page3-div h1", {
@@ -680,25 +703,32 @@ function gsapForMobile() {
 
 }
 
-// For #page3 headings - text animation
-function textAnimation() {
-    const h3Holder = document.querySelector(".h3Holder");
-    const h3 = document.querySelectorAll("#page3 #page3-div2 .image-div-container .h3Holder h3");
-    h3Holder.addEventListener("mouseenter", () => {
-        h3.forEach((elem) => {
-            gsap.to(elem, {
-                y: -40,
-            });
-        });
-    });
+function moreForMobile() {
 
-    h3Holder.addEventListener("mouseleave", () => {
-        h3.forEach((elem) => {
-            gsap.to(elem, {
-                y: 0,
-            });
-        });
-    });
+    // By Clicking on the video container
+    var videoContainer = document.querySelector("#video-container");
+    var playCrsr = document.querySelector("#play-crsr");
+    var video = document.querySelector("#video-container video");
+
+    var flag = 0;
+    videoContainer.addEventListener("click", function () {
+        if (flag == 0) {
+            video.play();
+            video.style.opacity = 1
+            gsap.to("#play-crsr", {
+                opacity: 0
+            })
+            flag = 1;
+        } else {
+            video.pause();
+            video.style.opacity = 0
+            gsap.to("#play-crsr", {
+                opacity: 1
+            })
+            flag = 0;
+        }
+
+    })
 }
 
 loadingAnimation();
@@ -717,6 +747,6 @@ else {
     extraImg.forEach(function (img) {
         img.style.display = "none";
     })
-
+    moreForMobile();
     gsapForMobile();
 }
