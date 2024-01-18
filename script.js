@@ -729,6 +729,39 @@ function moreForMobile() {
         }
 
     })
+
+    // For #hamburger
+    var first_svg = document.querySelector("#nav-part1 #first_svg");
+    var ham = 0;
+    first_svg.addEventListener("click", function () {
+        if (ham == 0) {
+            // hamburger.style.display = "block"
+            // for #hamburger
+            // var tl = gsap.timeline();
+            gsap.to("#hamburger", {
+                display: "block"
+            })
+            gsap.to("#hamburger", {
+                // opacity: 1,
+                top: 0,
+                duration: 0.5
+            })
+            document.body.style.overflow = 'hidden';
+            ham = 1;
+        }
+        else {
+            var tl = gsap.timeline();
+            tl.to("#hamburger", {
+                // opacity: 0,
+                top: "-100vh"
+            })
+            tl.to("#hamburger", {
+                display: "none"
+            })
+            document.body.style.overflow = 'auto';
+            ham = 0;
+        }
+    })
 }
 
 loadingAnimation();
