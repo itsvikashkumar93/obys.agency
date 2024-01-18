@@ -1005,6 +1005,8 @@ body {
 }
 
 #footer-div .box #mail {
+    font-size: 1.6vw;
+    font-weight: 500;
     text-decoration: underline;
 }
 
@@ -1502,6 +1504,10 @@ body {
 
     #footer-div .box h4 {
         font-size: 5.8vw;
+    }
+
+    #footer-div .box #mail {
+        font-size: 4.3vw;
     }
 
     #footer-div #second-underline2 {
